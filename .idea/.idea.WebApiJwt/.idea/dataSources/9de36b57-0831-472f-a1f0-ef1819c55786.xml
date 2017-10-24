@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="webapijwt@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+    <root id="1"/>
+    <schema id="2" parent="1" name="webapijwt">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="albaraka-kumbara"/>
+    <schema id="4" parent="1" name="aspnetcore-stack"/>
+    <schema id="5" parent="1" name="bitfil"/>
+    <schema id="6" parent="1" name="bitfil2"/>
+    <schema id="7" parent="1" name="dice"/>
+    <schema id="8" parent="1" name="elastic"/>
+    <schema id="9" parent="1" name="ethereum-blockchain"/>
+    <schema id="10" parent="1" name="exchange"/>
+    <schema id="11" parent="1" name="exchange2"/>
+    <schema id="12" parent="1" name="fal"/>
+    <schema id="13" parent="1" name="fal2"/>
+    <schema id="14" parent="1" name="garaj_crm"/>
+    <schema id="15" parent="1" name="gbyf"/>
+    <schema id="16" parent="1" name="information_schema"/>
+    <schema id="17" parent="1" name="just-bit"/>
+    <schema id="18" parent="1" name="kartaca"/>
+    <schema id="19" parent="1" name="kelime-canavari"/>
+    <schema id="20" parent="1" name="molervo"/>
+    <schema id="21" parent="1" name="mysql"/>
+    <schema id="22" parent="1" name="ornekdb"/>
+    <schema id="23" parent="1" name="parent-control"/>
+    <schema id="24" parent="1" name="performance_schema"/>
+    <schema id="25" parent="1" name="pomodoro"/>
+    <schema id="26" parent="1" name="qa"/>
+    <schema id="27" parent="1" name="spring-stack"/>
+    <schema id="28" parent="1" name="sys"/>
+    <schema id="29" parent="1" name="test_uni"/>
+    <schema id="30" parent="1" name="track-children"/>
+    <schema id="31" parent="1" name="university-announcement"/>
+    <schema id="32" parent="1" name="vicedice"/>
+    <schema id="33" parent="1" name="vicedice2"/>
+    <schema id="34" parent="1" name="whatwhat"/>
+    <table id="35" parent="2" name="AspNetRoleClaims"/>
+    <table id="36" parent="2" name="AspNetRoles"/>
+    <table id="37" parent="2" name="AspNetUserClaims"/>
+    <table id="38" parent="2" name="AspNetUserLogins"/>
+    <table id="39" parent="2" name="AspNetUserRoles"/>
+    <table id="40" parent="2" name="AspNetUserTokens"/>
+    <table id="41" parent="2" name="AspNetUsers"/>
+    <column id="42" parent="35" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="43" parent="35" name="ClaimType">
+      <Position>2</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="44" parent="35" name="ClaimValue">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="45" parent="35" name="RoleId">
+      <Position>4</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="46" parent="35" name="IX_AspNetRoleClaims_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="47" parent="35" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="48" parent="35" name="FK_AspNetRoleClaims_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetRoles</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="49" parent="36" name="Id">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="50" parent="36" name="ConcurrencyStamp">
+      <Position>2</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="51" parent="36" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="52" parent="36" name="NormalizedName">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <index id="53" parent="36" name="RoleNameIndex">
+      <ColNames>NormalizedName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="36" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="55" parent="36" name="RoleNameIndex">
+      <ColNames>NormalizedName</ColNames>
+      <UnderlyingIndexName>RoleNameIndex</UnderlyingIndexName>
+    </key>
+    <column id="56" parent="37" name="Id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="37" name="ClaimType">
+      <Position>2</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="58" parent="37" name="ClaimValue">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="59" parent="37" name="UserId">
+      <Position>4</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="60" parent="37" name="IX_AspNetUserClaims_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="61" parent="37" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="62" parent="37" name="FK_AspNetUserClaims_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="63" parent="38" name="LoginProvider">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="38" name="ProviderKey">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="65" parent="38" name="ProviderDisplayName">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="66" parent="38" name="UserId">
+      <Position>4</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="67" parent="38" name="IX_AspNetUserLogins_UserId">
+      <ColNames>UserId</ColNames>
+    </index>
+    <key id="68" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>LoginProvider
+ProviderKey</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="69" parent="38" name="FK_AspNetUserLogins_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="70" parent="39" name="UserId">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="71" parent="39" name="RoleId">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="72" parent="39" name="IX_AspNetUserRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+    </index>
+    <key id="73" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserId
+RoleId</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="74" parent="39" name="FK_AspNetUserRoles_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <foreign-key id="75" parent="39" name="FK_AspNetUserRoles_AspNetRoles_RoleId">
+      <ColNames>RoleId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetRoles</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="76" parent="40" name="UserId">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="77" parent="40" name="LoginProvider">
+      <Position>2</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="40" name="Name">
+      <Position>3</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="40" name="Value">
+      <Position>4</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <key id="80" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>UserId
+LoginProvider
+Name</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="81" parent="40" name="FK_AspNetUserTokens_AspNetUsers_UserId">
+      <ColNames>UserId</ColNames>
+      <RefSchemaName>webapijwt</RefSchemaName>
+      <RefTableName>AspNetUsers</RefTableName>
+      <RefColNames>Id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+    </foreign-key>
+    <column id="82" parent="41" name="Id">
+      <Position>1</Position>
+      <DataType>varchar(127)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="83" parent="41" name="AccessFailedCount">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="84" parent="41" name="ConcurrencyStamp">
+      <Position>3</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="85" parent="41" name="Email">
+      <Position>4</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="86" parent="41" name="EmailConfirmed">
+      <Position>5</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="87" parent="41" name="LockoutEnabled">
+      <Position>6</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="88" parent="41" name="LockoutEnd">
+      <Position>7</Position>
+      <DataType>datetime(6)|0</DataType>
+    </column>
+    <column id="89" parent="41" name="NormalizedEmail">
+      <Position>8</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="90" parent="41" name="NormalizedUserName">
+      <Position>9</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <column id="91" parent="41" name="PasswordHash">
+      <Position>10</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="92" parent="41" name="PhoneNumber">
+      <Position>11</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="93" parent="41" name="PhoneNumberConfirmed">
+      <Position>12</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="94" parent="41" name="SecurityStamp">
+      <Position>13</Position>
+      <DataType>longtext|0</DataType>
+    </column>
+    <column id="95" parent="41" name="TwoFactorEnabled">
+      <Position>14</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="96" parent="41" name="UserName">
+      <Position>15</Position>
+      <DataType>varchar(256)|0</DataType>
+    </column>
+    <index id="97" parent="41" name="EmailIndex">
+      <ColNames>NormalizedEmail</ColNames>
+    </index>
+    <index id="98" parent="41" name="UserNameIndex">
+      <ColNames>NormalizedUserName</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="99" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="100" parent="41" name="UserNameIndex">
+      <ColNames>NormalizedUserName</ColNames>
+      <UnderlyingIndexName>UserNameIndex</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
